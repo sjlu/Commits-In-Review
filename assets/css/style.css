@@ -9708,3 +9708,8 @@ body {
 .btn img {
   padding-right: 5px;
 }
+
+#github-logo {
+  width: 22px;
+  height: 22px;
+}
