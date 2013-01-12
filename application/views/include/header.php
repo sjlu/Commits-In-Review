@@ -3,11 +3,11 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="" />
-   <meta name="keywords" content="" />
-   <meta name="author" content="">
+   <meta name="description" content="Your 2012 Github commits under review." />
+   <meta name="keywords" content="github, commits, git, review" />
+   <meta name="author" content="Steven Lu">
 
-   <title></title>
+   <title>Your Commits Under Review</title>
 
    <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
 
