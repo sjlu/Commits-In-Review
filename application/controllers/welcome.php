@@ -23,7 +23,11 @@ class Welcome extends CI_Controller
 				$this->load->view('welcome', array('error' => true));
 
 			$this->session->set_userdata('access_token', $access_token);
+
 			// what to do with this access token?
+			$username = $this->github_model->get_username($access_token);
+			$repositories = $this->github_model->get_repositories($access_token);
+			$this->github_model->get_commits($access_token, $repositories, $username);
 		}
 		else
 			$this->load->view('welcome');
