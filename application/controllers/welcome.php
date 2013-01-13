@@ -27,7 +27,13 @@ class Welcome extends CI_Controller
 			// what to do with this access token?
 			$username = $this->github_model->get_username($access_token);
 			$repositories = $this->github_model->get_repositories($access_token);
-			$this->github_model->get_commits($access_token, $repositories, $username);
+			$commits = $this->github_model->get_commits($access_token, $repositories, $username);
+
+			$this->load->view('commits', array(
+				'commits' => $commits, 
+				'commit_count' => count($commits),
+				'repo_count' => count($repositories)
+			));
 		}
 		else
 			$this->load->view('welcome');
